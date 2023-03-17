@@ -59,5 +59,14 @@ public class ProductRepositoryTest {
 
     }
 
+    @Test
+
+    public void shouldRemoveByIdFailed() {
+        int id = 159;
+        Assertions.assertThrows(NotFoundException.class, () -> {
+            repository.removeById(id);
+        });
+    }
+
 
 }
